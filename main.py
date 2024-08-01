@@ -12,12 +12,13 @@ def get_num_words(text):
 
 def get_num_chars(text):
     chars_count = {}
-    lowered_text = text.lower()
-    for char in lowered_text:
-        if char in chars_count:
-            chars_count[char] += 1
-        else:
-            chars_count[char] = 1
+    for char in text:
+        if char.isalpha():
+            char = char.lower()
+            if char in chars_count:
+                chars_count[char] += 1
+            else:
+                chars_count[char] = 1
     return chars_count
 
 def get_book_text(path):
