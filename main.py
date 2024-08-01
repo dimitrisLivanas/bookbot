@@ -4,7 +4,6 @@ def main():
     num_words = get_num_words(text)
     num_chars = get_num_chars(text)
     num_chars_list = convert_dict_to_list(num_chars)
-    # print(f"Here's how many times each character appears: {num_chars_list}")
     print_report(book_path, num_words, num_chars_list)
 
 def get_num_words(text):
