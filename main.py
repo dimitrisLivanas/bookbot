@@ -3,8 +3,9 @@ def main():
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     num_chars = get_num_chars(text)
-    print(f"{num_words} words found in the document")
-    print(f"Here's how many times each character appears: {num_chars}")
+    num_chars_list = convert_dict_to_list(num_chars)
+    # print(f"Here's how many times each character appears: {num_chars_list}")
+    print_report(book_path, num_words, num_chars_list)
 
 def get_num_words(text):
     words = text.split()
@@ -24,5 +25,21 @@ def get_num_chars(text):
 def get_book_text(path):
     with open(path) as f:
         return f.read()
+    
+def convert_dict_to_list(dict):
+    list = [{'key': k, 'value': v} for k, v in dict.items()]
+    def sort_on(item):
+        return item['value']
+    sorted_list = sorted(list, reverse=True, key=sort_on)
+    return sorted_list
+
+def print_report(path, words, list):
+    print(f"--- Begin report of {path} ---")
+    print(f"{words} words found in the document\n")
+    for entry in list:
+        print(f"The '{entry['key']}' character was found {entry['value']} times")
+    print("--- End report ---")
+
+
 
 main()
