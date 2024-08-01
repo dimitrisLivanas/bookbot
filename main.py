@@ -40,5 +40,4 @@ def print_report(path, words, list):
     print("--- End report ---")
 
 
-
 main()
