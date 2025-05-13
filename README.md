@@ -1,5 +1,6 @@
 # BookBot
 
+#### BookBot is my first [Boot.dev](https://www.boot.dev) project!
 #### BookBot is a Python script that analyzes a text file for word and character statistics. It reads a specified book file, counts the number of words, and tallies the occurrences of each alphabetical character, then generates a simple report.
 
 #### BookBot is a guided project; part of the Back-end developer career path on [boot.dev](https://www.boot.dev)
