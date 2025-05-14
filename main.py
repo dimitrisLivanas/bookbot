@@ -42,8 +42,7 @@ def print_report(path, words, list):
     print(f"--- Begin report of {path} ---")
     print(f"{words} words found in the document\n")
     for entry in list:
-        print(f"The '{entry['key']}' character was found {
-              entry['value']} times")
+        print(f"{entry['key']}: {entry['value']}")
     print("--- End report ---")
 
 
